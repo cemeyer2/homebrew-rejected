@@ -1,7 +1,7 @@
 class Wsmancli < Formula
   homepage 'https://github.com/Openwsman/wsmancli'
-  url 'https://github.com/Openwsman/wsmancli/archive/v2.3.0.tar.gz'
-  sha1 '161288cbc4f5a60a2d683d96ead3a0934a9c5523'
+  url 'https://github.com/Openwsman/wsmancli/archive/refs/tags/v2.6.0.tar.gz'
+  sha256 '766fef60d4c627d8b6129b3c9ae97d8676442bc6110b3a723610c54894365e0d'
 
   depends_on "openwsman"
   depends_on "autoconf"   => :build
