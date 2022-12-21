@@ -15,7 +15,7 @@ class Openwsman < Formula
   def install
     ENV.cxx11
 
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "-DBUILD_PYTHON=FALSE", "-DBUILD_PYTHON3=TRUE", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
