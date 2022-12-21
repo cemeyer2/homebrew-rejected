@@ -12,7 +12,7 @@ class Openwsman < Formula
   depends_on "openssl"
 
   def install
-    system "./autoconfiscate.sh"
+    system "./autoconfiscate.sh --ignore-deprecation-warning"
     system "./configure", "--disable-more-warnings",
                           "--disable-dependency-tracking",
                           "--prefix=#{prefix}"
