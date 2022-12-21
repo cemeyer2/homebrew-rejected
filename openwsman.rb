@@ -10,13 +10,14 @@ class Openwsman < Formula
   depends_on "libtool"    => :build
   depends_on "pkg-config" => :build
   depends_on "openssl"
+  depends_on "cmake"      => :build
 
   def install
-    system "./autoconfiscate.sh --ignore-deprecation-warning"
-    system "./configure", "--disable-more-warnings",
-                          "--disable-dependency-tracking",
-                          "--prefix=#{prefix}"
-    system "make", "install"
+    ENV.cxx11
+
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
 
