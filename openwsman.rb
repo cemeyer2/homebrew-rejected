@@ -1,7 +1,7 @@
 class Openwsman < Formula
   homepage 'http://openwsman.github.io'
-  url "https://github.com/Openwsman/openwsman/archive/v2.3.6.tar.gz"
-  sha1 'ed8cfc3c1705e8aecf4a64d2285e69bdfc0f11ff'
+  url "https://github.com/Openwsman/openwsman/archive/refs/tags/v2.7.1.tar.gz"
+  sha256 'd260464c8af4c009c743778c667df02a2f558a216a5dfb79ebbef75fc947ba6f'
 
   depends_on "libxml2"
   depends_on "sblim-sfcc"
